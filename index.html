@@ -440,6 +440,34 @@
         transform: scale(1.1);
         box-shadow: 0 8px 20px rgba(196, 30, 58, 0.3);
       }
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 15px; /* Adjust spacing between icons */
+  align-items: center;
+}
+
+.call-icon i, .whatsapp-icon i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.call-icon {
+  color: #007bff; /* Standard blue for phone, or use your brand color */
+}
+
+.whatsapp-icon {
+  color: #25D366; /* Official WhatsApp Green */
+}
+
+.call-icon:hover, .whatsapp-icon:hover {
+  transform: scale(1.1);
+}
 
       @media (max-width: 768px) {
         .logo {
