@@ -302,6 +302,55 @@
         color: var(--primary);
       }
 
+      /* Contact details block */
+      .contact-details {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 1.5rem 0 2rem;
+        text-align: left;
+      }
+
+      .contact-detail-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.05rem;
+        color: var(--dark);
+      }
+
+      .contact-detail-row i {
+        color: var(--primary);
+        font-size: 1.1rem;
+        width: 20px;
+        flex-shrink: 0;
+      }
+
+      .contact-detail-row a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+
+      .contact-detail-row a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
+      .contact-detail-row span {
+        color: var(--dark);
+        font-weight: 500;
+      }
+
+      .contact-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+
       iframe {
         width: 100%;
         max-width: 800px;
@@ -364,6 +413,11 @@
 
         iframe {
           height: 300px;
+        }
+
+        .contact-buttons {
+          flex-direction: column;
+          align-items: center;
         }
       }
 
@@ -440,34 +494,29 @@
         transform: scale(1.1);
         box-shadow: 0 8px 20px rgba(196, 30, 58, 0.3);
       }
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.contact-icons {
-  display: flex;
-  gap: 15px; /* Adjust spacing between icons */
-  align-items: center;
-}
+      .contact-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
 
-.call-icon i, .whatsapp-icon i {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
+      .call-icon i, .whatsapp-icon i {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+      }
 
-.call-icon {
-  color: #007bff; /* Standard blue for phone, or use your brand color */
-}
+      .call-icon {
+        color: #007bff;
+      }
 
-.whatsapp-icon {
-  color: #25D366; /* Official WhatsApp Green */
-}
+      .whatsapp-icon {
+        color: #25D366;
+      }
 
-.call-icon:hover, .whatsapp-icon:hover {
-  transform: scale(1.1);
-}
+      .call-icon:hover, .whatsapp-icon:hover {
+        transform: scale(1.1);
+      }
 
       @media (max-width: 768px) {
         .logo {
@@ -483,34 +532,31 @@
     </style>
 
     <nav>
-  <div class="nav-container">
-    <a href="#" class="logo">Lavanya <span>Saree Pre-Pleating</span></a>
-    
-    <div class="contact-icons">
-      <a href="tel:+919791139339" class="call-icon" title="Call Us">
-        <i class="fas fa-phone"></i>
-      </a>
+      <div class="nav-container">
+        <a href="#" class="logo">Lavanya <span>Saree Pre-Pleating</span></a>
 
-      <a
-        href="https://wa.me/919791139339"
-        target="_blank"
-        class="whatsapp-icon"
-        title="Chat on WhatsApp"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </div>
-</nav>
+        <div class="contact-icons">
+          <a href="tel:+919791139339" class="call-icon" title="Call Us">
+            <i class="fas fa-phone"></i>
+          </a>
 
+          <a
+            href="https://wa.me/919791139339"
+            target="_blank"
+            class="whatsapp-icon"
+            title="Chat on WhatsApp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <header class="hero">
       <div class="hero-content">
         <h1>Look Elegant in Minutes</h1>
         <p>Professional Saree Pre-Pleating in Chennai</p>
-        <a href="https://wa.me/919791139339" class="btn"
-          >Book Now on WhatsApp</a
-        >
+        <a href="https://wa.me/919791139339" class="btn">Book Now on WhatsApp</a>
       </div>
     </header>
 
@@ -547,26 +593,37 @@
       <h2>Portfolio</h2>
       <div class="gallery">
         <img src="assets/gallery1.png" alt="Silk Saree Pre Pleating" />
-        <!-- <img src="assets/gallery1.png" alt="Chiffon Saree Pre Pleating" />
-        <img src="assets/gallery1.png" alt="Designer Saree Pre Pleating" /> -->
       </div>
     </section>
 
     <section class="section alt">
       <h2>Contact & Location</h2>
-      <p><strong>Location:</strong> Ullagaram, Chennai</p>
-      <a href="https://wa.me/+919791139339" class="btn">Chat on WhatsApp</a>
-<a href="tel:+919791139339" title="Call Us" class="btn">Call us</a>
-     <iframe
-  src="https://maps.google.com/?cid=13885119272572361624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
-  width="600"
-  height="450"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
 
+      <div class="contact-details">
+        <div class="contact-detail-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Ullagaram, Chennai</span>
+        </div>
+        <div class="contact-detail-row">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+919791139339">+91 9791139339</a>
+        </div>
+      </div>
+
+      <div class="contact-buttons">
+        <a href="https://wa.me/+919791139339" class="btn">Chat on WhatsApp</a>
+        <a href="tel:+919791139339" class="btn">Call Us</a>
+      </div>
+
+      <iframe
+        src="https://maps.google.com/?cid=13885119272572361624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </section>
 
     <footer>
